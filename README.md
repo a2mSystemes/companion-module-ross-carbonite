@@ -4,7 +4,7 @@ Ross Carbonite module for Bitfocus Companion
 # Disclaimer
 
 > [!WARNING]
-> __This is a work ion progress. NOT TESTED YET AND NOT PRODUCTION READY__.
+> __This is a work in progress. NOT TESTED YET AND NOT PRODUCTION READY__.
 > This software is provided "as is", without warranty of any kind. The author
 > cannot be held liable for any damage, malfunction or loss resulting from its
 > use, including during live productions. Use it at your own risk and test it
@@ -13,7 +13,7 @@ Ross Carbonite module for Bitfocus Companion
 
 ## Ross Carbonite
 
-Controls a Carbonite switcher series. For now only Cabonite Black Solo (CBF-109) or Carbonite Black Solo 13 (CBF-113) are available. This module uses RossTalk to communicate with teh switcher, and reads tally and source names back with TSL UMD v3.1.
+Controls a Carbonite switcher series. For now only Carbonite Black Solo (CBF-109) or Carbonite Black Solo 13 (CBF-113) are available. This module uses RossTalk to communicate with teh switcher, and reads tally and source names back with TSL UMD v3.1.
 
 ### Control (RossTalk)
 
@@ -69,6 +69,8 @@ The TSL addresses used are those of the Carbonite Black Solo column of the [Ross
 
 # Credits
 
+Based on [companion-module-rossvideo-rosstalk](https://github.com/bitfocus/companion-module-rossvideo-rosstalk).
+
 [ROSS&reg;](https://www.rossvideo.com/)\
 [Bitfocus](https://bitfocus.io)
 
@@ -89,4 +91,9 @@ see [LICENSE](./LICENSE)
 
 # Author
 
-[Ange-Marie MAURIN](mailto://a-m.maurin@a2msystemes.fr)
+[Ange-Marie MAURIN](mailto:a-m.maurin@a2msystemes.fr)
+
+# AI assistance
+
+Parts of this module were written with the help of Claude Code ([Anthropic](https://www.anthropic.com)).
+All code was reviewed by the author. Hardware testing is still in progress.
