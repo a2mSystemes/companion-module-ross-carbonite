@@ -1,0 +1,9 @@
+node_modules/
+
+# Companion 3
+/pkg
+/pkg.tgz
+/*.tgz
+.DS_Store
+
+.claude/

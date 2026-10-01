@@ -1,0 +1,26 @@
+{
+	"name": "ross-carbonite",
+	"version": "0.1.0",
+	"main": "main.js",
+	"scripts": {
+		"test": "node --test",
+		"package": "companion-module-build",
+		"github:prepare": "pwsh -NoProfile -File tools/GithubManagement.ps1 -Action prepare",
+		"github:commit": "pwsh -NoProfile -File tools/GithubManagement.ps1 -Action commit",
+		"github:push": "pwsh -NoProfile -File tools/GithubManagement.ps1 -Action push"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/a2msystemes/companion-module-ross-carbonite.git"
+	},
+	"engines": {
+		"node": "^22.8"
+	},
+	"dependencies": {
+		"@companion-module/base": "~1.12.0"
+	},
+	"devDependencies": {
+		"@companion-module/tools": "^2.8.0"
+	}
+}

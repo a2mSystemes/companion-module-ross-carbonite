@@ -1,0 +1,26 @@
+{
+	"id": "ross-carbonite",
+	"name": "ross-carbonite",
+	"shortname": "carbonite",
+	"description": "Ross Carbonite : RossTalk control with TSL UMD v3.1 feedback",
+	"version": "0.0.0",
+	"license": "MIT",
+	"repository": "https://a2msystemes-git.duckdns.org/ange/companion-module-ross-carbonite.git",
+	"bugs": "https://a2msystemes-git.duckdns.org/ange/companion-module-ross-carbonite/issues",
+	"maintainers": [
+		{
+			"name": "Ange-Marie MAURIN",
+			"email": "a-m.maurin@a2msystemes.fr"
+		}
+	],
+	"legacyIds": [],
+	"runtime": {
+		"type": "node22",
+		"api": "nodejs-ipc",
+		"apiVersion": "0.0.0",
+		"entrypoint": "../main.js"
+	},
+	"manufacturer": "Ross Video",
+	"products": ["Carbonite Black Solo", "Carbonite Black Solo 13"],
+	"keywords": ["Video Mixer", "RossTalk", "TSL UMD", "Carbonite", "Carbonite Black Solo", "Carbonite Black Solo 13"]
+}

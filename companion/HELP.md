@@ -1,6 +1,3 @@
-# companion-module-ross-carbonite
-Ross Carbonite module for Bitfocus Companion
-
 ## Ross Carbonite
 
 Controls a Carbonite switcher series. For now only Cabonite Black Solo (CBF-109) or Carbonite Black Solo 13 (CBF-113) are available. This module uses RossTalk to communicate with teh switcher, and reads tally and source names back with TSL UMD v3.1.
