@@ -56,3 +56,16 @@ Open the listen port in the firewall of the computer running Companion.
 - `bus_me1_bkgd_source`, `bus_me1_pst_source`, `bus_aux1_source` ...: name of the source selected on the bus, and `..._source_id` for its TSL ID.
 
 The TSL addresses used are those of the Carbonite Black Solo column of the [Ross TSL UMD setup page](https://help.rossvideo.com/carbonite-device/Topics/Devices/UMD/TSL.html).
+
+# Credits
+
+- [ROSS&reg;](https://www.rossvideo.com/)
+- [Bitfocus](https://bitfocus.io)
+
+# License
+
+see [LICENSE](./LICENSE)
+
+# Author
+
+[Ange-Marie MAURIN](mailto://a-m.maurin@a2msystemes.fr)
