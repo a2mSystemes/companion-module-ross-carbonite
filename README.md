@@ -1,6 +1,16 @@
 # companion-module-ross-carbonite
 Ross Carbonite module for Bitfocus Companion
 
+# Disclaimer
+
+> [!WARNING]
+> __This is a work ion progress. NOT TESTED YET AND NOT PRODUCTION READY__.
+> This software is provided "as is", without warranty of any kind. The author
+> cannot be held liable for any damage, malfunction or loss resulting from its
+> use, including during live productions. Use it at your own risk and test it
+> before going on air. See [LICENCE](#license)
+
+
 ## Ross Carbonite
 
 Controls a Carbonite switcher series. For now only Cabonite Black Solo (CBF-109) or Carbonite Black Solo 13 (CBF-113) are available. This module uses RossTalk to communicate with teh switcher, and reads tally and source names back with TSL UMD v3.1.
@@ -59,10 +69,21 @@ The TSL addresses used are those of the Carbonite Black Solo column of the [Ross
 
 # Credits
 
-- [ROSS&reg;](https://www.rossvideo.com/)
-- [Bitfocus](https://bitfocus.io)
+[ROSS&reg;](https://www.rossvideo.com/)\
+[Bitfocus](https://bitfocus.io)
 
 # License
+
+The MIT License
+
+> [!WARNING]
+>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+>IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+>FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+>AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+>LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+>OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+>THE SOFTWARE.
 
 see [LICENSE](./LICENSE)
 
