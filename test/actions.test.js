@@ -87,7 +87,7 @@ test('model tables match the Ross TSL mapping', () => {
 
 	const tsl = Object.fromEntries(getBuses().map((bus) => [bus.key, bus.tsl]))
 	assert.equal(tsl.me1_bkgd, 37)
-	assert.equal(tsl.me1_pst, 38)
+	assert.equal(tsl.me1_pv, 38)
 	assert.equal(tsl.me1_key1, 39)
 	assert.equal(tsl.me1_key4_alpha, 46)
 	assert.equal(tsl.aux1, 67)
@@ -101,6 +101,12 @@ test('model tables match the Ross TSL mapping', () => {
 
 	const addresses = getBuses().map((bus) => bus.tsl)
 	assert.equal(new Set(addresses).size, addresses.length)
+
+	// Preview bus (PST) and preview outputs (PV) must stay distinguishable
+	const labels = solo13.map((s) => s.label)
+	assert.equal(new Set(labels).size, labels.length)
+	const keys = solo13.map((s) => s.key)
+	assert.equal(new Set(keys).size, keys.length)
 })
 
 test('feedbacks follow the TSL state', () => {

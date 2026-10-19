@@ -52,13 +52,14 @@ function getSources(modelId) {
 	}
 	sources.push({ id: 'CLIP', key: 'clip', label: 'Clip Player', name: 'CLIP' })
 	sources.push({ id: 'PGM', key: 'pgm', label: 'Program', name: 'PGM', tsl: 110 })
-	sources.push({ id: 'PV', key: 'pv', label: 'Preview', name: 'PV', tsl: 111 })
+	// PV is the preview output. The bus Ross calls Preset (PST) is labelled Preview in this module.
+	sources.push({ id: 'PV', key: 'pvout', label: 'Preview Out', name: 'PV OUT', tsl: 111 })
 	sources.push({ id: 'CLN', key: 'cln', label: 'Clean Feed', name: 'CLN', tsl: 112 })
 	sources.push({ id: 'ME:1:PGM', key: 'me1_pgm', label: 'ME 1 Program', name: 'ME1 PGM', tsl: 113 })
-	sources.push({ id: 'ME:1:PV', key: 'me1_pv', label: 'ME 1 Preview', name: 'ME1 PV', tsl: 114 })
+	sources.push({ id: 'ME:1:PV', key: 'me1_pvout', label: 'ME 1 Preview Out', name: 'ME1 PVO', tsl: 114 })
 	sources.push({ id: 'ME:1:CLN', key: 'me1_cln', label: 'ME 1 Clean', name: 'ME1 CLN', tsl: 115 })
 	sources.push({ id: 'ME:1:BKGD', key: 'me1_bkgd', label: 'ME 1 Background', name: 'ME1 BKGD', tsl: 37 })
-	sources.push({ id: 'ME:1:PST', key: 'me1_pst', label: 'ME 1 Preset', name: 'ME1 PST', tsl: 38 })
+	sources.push({ id: 'ME:1:PST', key: 'me1_pv', label: 'ME 1 Preview', name: 'ME1 PV', tsl: 38 })
 	for (const k of range(RESOURCES.meKeyers)) {
 		const base = 37 + 2 * k
 		sources.push({ id: `ME:1:KEY:${k}:V`, key: `me1_key${k}_v`, label: `ME 1 Key ${k} Video`, name: `K${k} V`, tsl: base })
@@ -75,7 +76,7 @@ function getSources(modelId) {
 	for (const n of range(RESOURCES.miniMes)) {
 		const base = 87 + 4 * (n - 1)
 		sources.push({ id: `MME:${n}:PGM`, key: `mme${n}_pgm`, label: `MiniME ${n} Program`, name: `MME${n}`, tsl: 115 + n })
-		sources.push({ id: `MME:${n}:PV`, key: `mme${n}_pv`, label: `MiniME ${n} Preview`, name: `MME${n} PV` })
+		sources.push({ id: `MME:${n}:PV`, key: `mme${n}_pvout`, label: `MiniME ${n} Preview Out`, name: `MME${n} PVO` })
 		sources.push({
 			id: `MME:${n}:BKGD`,
 			key: `mme${n}_bkgd`,
@@ -83,7 +84,7 @@ function getSources(modelId) {
 			name: `MME${n} BG`,
 			tsl: base,
 		})
-		sources.push({ id: `MME:${n}:PST`, key: `mme${n}_pst`, label: `MiniME ${n} Preset`, name: `MME${n} PST`, tsl: base + 1 })
+		sources.push({ id: `MME:${n}:PST`, key: `mme${n}_pv`, label: `MiniME ${n} Preview`, name: `MME${n} PV`, tsl: base + 1 })
 	}
 	for (const n of range(RESOURCES.auxes)) {
 		sources.push({ id: `AUX:${n}`, key: `aux${n}`, label: `Aux ${n}`, name: `AUX ${n}`, tsl: 66 + n })
@@ -99,7 +100,7 @@ function getSources(modelId) {
 function getBuses() {
 	const buses = [
 		{ key: 'me1_bkgd', label: 'ME 1 Background (Program)', tsl: 37, dest: 'ME:1:PGM' },
-		{ key: 'me1_pst', label: 'ME 1 Preset', tsl: 38, dest: 'ME:1:PST' },
+		{ key: 'me1_pv', label: 'ME 1 Preview', tsl: 38, dest: 'ME:1:PST' },
 	]
 	for (const k of range(RESOURCES.meKeyers)) {
 		const base = 37 + 2 * k
@@ -112,7 +113,7 @@ function getBuses() {
 	for (const n of range(RESOURCES.miniMes)) {
 		const base = 87 + 4 * (n - 1)
 		buses.push({ key: `mme${n}_bkgd`, label: `MiniME ${n} Background`, tsl: base, dest: `MME:${n}` })
-		buses.push({ key: `mme${n}_pst`, label: `MiniME ${n} Preset`, tsl: base + 1 })
+		buses.push({ key: `mme${n}_pv`, label: `MiniME ${n} Preview`, tsl: base + 1 })
 		for (const k of range(RESOURCES.miniMeKeyers)) {
 			buses.push({ key: `mme${n}_key${k}`, label: `MiniME ${n} Key ${k}`, tsl: base + 1 + k })
 		}

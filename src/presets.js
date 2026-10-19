@@ -45,9 +45,9 @@ module.exports = function (self) {
 				},
 			],
 		)
-		presets[`pst_${source.key}`] = button(
-			'Preset',
-			`${source.label} to Preset`,
+		presets[`pv_${source.key}`] = button(
+			'Preview',
+			`${source.label} to Preview`,
 			text,
 			'xpt',
 			{ vidDest: 'ME:1:PST', vidSource: source.id },

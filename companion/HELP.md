@@ -11,7 +11,7 @@ The switcher accepts RossTalk on TCP port 7788, nothing has to be enabled on it.
 - Trigger GPI
 - Fire custom control
 - Cut, Auto Transition, Fade to black
-- XPT (select a source on Program, Preset, a key, an Aux bus or a MiniME)
+- XPT (select a source on Program, Preview, a key, an Aux bus or a MiniME)
 - Transition Keyer, Key Mode
 - Next Transition: included elements, Transition Rate, Transition Type
 - Recall Memory, Store Memory
@@ -26,6 +26,8 @@ The switcher accepts RossTalk on TCP port 7788, nothing has to be enabled on it.
 The commands are those of the [Ross RossTalk reference](https://help.rossvideo.com/carbonite-device/Topics/Protocol/RossTalk/CNT/RT-CNT-Comm.html). Older software versions do not know all of them: run **List supported commands** and read the module log to see what your switcher accepts. The switcher gives no answer to a command, so an action that is refused fails silently.
 
 The HDMI inputs come after the SDI inputs: `IN:13` on the Solo 13, `IN:7` to `IN:9` on the Solo.
+
+This module calls **Preview** the bus that Ross calls Preset (`PST` in RossTalk). The preview outputs (`PV` in RossTalk) are listed as **Preview Out**.
 
 ### Feedback (TSL UMD v3.1)
 
@@ -44,19 +46,20 @@ Open the listen port in the firewall of the computer running Companion.
 **Feedbacks**
 
 - **Tally: source on Program / Preview**: the tally the switcher sends for an input or a Media-Store (TSL tally 2 is program, tally 1 is preview).
-- **Bus: source selected**: the source selected on ME 1 Background or Preset, on a key, on an Aux bus or on a MiniME. With **ShowUMDId** off the switcher only sends the name of the source, and the feedback is wrong when two sources have the same name. Black and Matte Color share TSL ID 0 and cannot be told apart.
+- **Bus: source selected**: the source selected on ME 1 Background or Preview, on a key, on an Aux bus or on a MiniME. With **ShowUMDId** off the switcher only sends the name of the source, and the feedback is wrong when two sources have the same name. Black and Matte Color share TSL ID 0 and cannot be told apart.
 - **TSL: tally of an address**: any tally of any TSL address.
 
 **Variables**
 
 - `source_in1_name` ..., `source_ms1_name` ...: source names set on the switcher.
-- `bus_me1_bkgd_source`, `bus_me1_pst_source`, `bus_aux1_source` ...: name of the source selected on the bus, and `..._source_id` for its TSL ID.
+- `bus_me1_bkgd_source`, `bus_me1_pv_source`, `bus_aux1_source` ...: name of the source selected on the bus, and `..._source_id` for its TSL ID.
 
 The TSL addresses used are those of the Carbonite Black Solo column of the [Ross TSL UMD setup page](https://help.rossvideo.com/carbonite-device/Topics/Devices/UMD/TSL.html).
 
 # Author
 
-[Ange-Marie MAURIN](mailto:a-m.maurin@a2msystemes.fr)
+Ange-Marie MAURIN : [a-m.maurin@a2msystemes.fr](mailto:a-m.maurin@a2msystemes.fr)
+
 
 # Disclaimer
 

@@ -91,7 +91,8 @@ see [LICENSE](./LICENSE)
 
 # Author
 
-[Ange-Marie MAURIN](mailto:a-m.maurin@a2msystemes.fr)
+Ange-Marie MAURIN : [a-m.maurin@a2msystemes.fr](mailto:a-m.maurin@a2msystemes.fr)
+
 
 # AI assistance
 
